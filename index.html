@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank management</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="home" id="home">
+        <h1>Bank Management</h1>
+        <form action="">
+            <input type="number" placeholder="Account number">
+            <input type="password" placeholder="Password" >
+        </form>
+        <div class="btn">
+            <button class="sbmt" id="sbmt">SUBMIT</button>
+            <button class="passReset">FORGOTTEN PASSWORD?</button>
+        </div>
+    </div>
+    <div class="tran" id="tran">
+        <h1>Transaction Area</h1>
+        <div class="info">
+            <div class="deposit">
+                <h3>Deposit</h3>
+                <h3 id="tdep">00</h3>
+            </div>
+            <div class="withdraw">
+                <h3>Withdraw</h3>
+                <h3 id="twith">00</h3>
+            </div>
+            <div class="balance">
+                <h3>Balance</h3>
+                <h3 id="tblnc">1200</h3>
+            </div>
+        </div>
+        <div class="transaction">
+            <div class="dep-box">
+                <h3>Enter Deposit amount</h3>
+                <input type="number" name="" id="dep" placeholder="$">
+                <button id="add">Deposit</button>
+            </div>
+            <div class="with-box">
+                <h3>Enter Withdraw amount</h3>
+                <input type="number" name="" id="with" placeholder="$">
+                <button id="remove">Withdraw</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
