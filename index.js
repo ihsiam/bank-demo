@@ -18,9 +18,8 @@ depbtn.addEventListener('click',function(){
 
     const amntDep = parseFloat(document.getElementById("dep-Amount").value);
 
-    updateBalance("crnt-dep",amntDep);
+    updateBalance("crnt-dep",amntDep,'dcount','dep-Amount');
     updateBalance("crnt-blnc",amntDep);
-    document.getElementById("dep-Amount").value = "";
 });
 
 //withdraw 
@@ -31,15 +30,20 @@ wthbtn.addEventListener('click',function(){
 
     const amntWith = parseFloat(document.getElementById("with-Amount").value);
    
-    updateBalance("crnt-with",amntWith);
+    updateBalance("crnt-with",amntWith,'wcount','with-Amount');
     updateBalance("crnt-blnc",-1*amntWith);
-    document.getElementById("with-Amount").value = "";
 });
 
 //function 
 
-function updateBalance(id, amnt){
+function updateBalance(id, amnt,cnt,clr){
     const currentBalance = parseFloat(document.getElementById(id).innerText);
     const totalBalance = currentBalance + amnt;
     document.getElementById(id).innerText = totalBalance;
+
+    var count = parseInt(document.getElementById(cnt).innerText);
+    count++;
+    document.getElementById(cnt).innerText = count;
+
+    document.getElementById(clr).value = "";
 }
